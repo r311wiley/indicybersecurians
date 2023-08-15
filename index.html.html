@@ -1,0 +1,50 @@
+<DOCTYPE HTML>
+<html lang="en">
+<head>
+     <title> Indiana-AND-CyberSecurians</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <style>
+     .login-box {
+         width: 300px;
+         margin: 100px auto;
+         border: 1px solid black;
+         padding: 20px;
+         text-align: center;
+     }
+     .inputText {
+         width: 80%;
+         margin: 10px 0;
+     }
+     </style>
+</head>
+    <script>
+    function validate()
+    {
+    var un = document.getElementById("username").value;
+    var pw = document.getElementById("password").value;
+    if(un=="Indiana1" && pw=="T3mp0sd00mz")
+    {
+    window.location.href="temple.html.html";
+    alert("Login Successful, You have gained access to the Temple!");
+    }
+    else
+    {
+    alert("Incorrect Username or Password");
+    }
+    return false; // prevent form submission
+    }
+    </script>
+    <body>
+     <div class="login-box">
+         <h1><font color="F10D3C">CyberSecurians Login Page</h1>
+             <form onsubmit="return validate()">
+             <p>Username</p>
+             <input type="text" autocomplete="off" id="username" class="inputText" placeholder="Enter username" required>
+             <p>Password</p>
+             <input type="password" id="password" class="inputText" placeholder="Enter password" required>
+             <input type="submit" value="Login">
+             <a href="#">forget Password</a>
+             </form>
+     </div>
+     </body>
+</html>

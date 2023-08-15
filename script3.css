@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+// Define the correct password
+var correctPassword = "BST{Yuu_rr_n0w_all_powerful}";
+
+// Get the elements from the document
+var passwordInput = document.getElementById("password");
+var button = document.getElementById("button");
+
+// Hide the button initially
+button.style.display = "none";
+
+// Add an event listener to the password input
+passwordInput.addEventListener("input", function() {
+  // Get the value of the password input
+  var password = passwordInput.value;
+
+  // Check if the password is correct
+  if (password === correctPassword) {
+    // Show the button
+    button.style.display = "block";
+  } else {
+    // Hide the button
+    button.style.display = "none";
+  }
+});
+</script>
+</head>
+<body>
+<!-- Create a password input and a button -->
+<input type="password" id="password" placeholder="Enter password">
+<button id="button">Click me</button>
+</body>
+</html>

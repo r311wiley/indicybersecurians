@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose-Your-Path</title>
+  <link rel="stylesheet" type="text/css" href="style3.css">
+</head>
+<body>
+<p><font color="0A2BDA">You have now entered the Temple!!</p>
+<h1>Restricted Access</h1>
+<p><font color="#F5F2EB">You've made it this far, now choose your path, choose wisely!!</p>
+<p><br><font color="#F5F2EB">Click "Path One" or "Path Two" to claim your flag</br></p>
+<a href="chosenpath1.html"><button>Path One</button></a>
+<br><br><a href="chosenpath2.html"><button>Path Two</button></a></br></br>
+<script>
+// Get the current folder name from the URL
+var folder = "DrJonesFlags";
+
+// Check if the user tries to access a different folder or file
+window.addEventListener("beforeunload", function(event) {
+  var newFolder = event.target.activeElement.href.split("/").pop();
+  if (newFolder !== folder && newFolder !== "") {
+    // Prevent the user from leaving the current folder
+    event.preventDefault();
+    event.returnValue = "You are not allowed to access this folder or file.";
+  }
+});
+</script>
+</body>
+</html>
+
+
+
+
+
